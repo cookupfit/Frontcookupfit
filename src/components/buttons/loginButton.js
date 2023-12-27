@@ -6,7 +6,7 @@ import {blackColor, greenColor, greyColor, whiteColor, redColor, yellowColor,} f
 console.log(blackColor);
 // Create a styled button component
 const StyledButton = styled(TouchableOpacity)`
-  background-color: ${blackColor};
+  background-color: ${greenColor};
   padding: 5% 0%;
   margin: 10px;
   border-radius: 40px;
