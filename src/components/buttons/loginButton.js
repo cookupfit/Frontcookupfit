@@ -6,7 +6,7 @@ import {blackColor, greenColor, greyColor, whiteColor, redColor, yellowColor,} f
 console.log(blackColor);
 // Create a styled button component
 const StyledButton = styled(TouchableOpacity)`
-  background-color: ${greenColor};
+  background-color: ${blackColor};
   padding: 5% 0%;
   margin: 10px;
   border-radius: 40px;
@@ -17,7 +17,7 @@ const StyledButton = styled(TouchableOpacity)`
 
 // Create a styled text component for the button label
 const ButtonText = styled(Text)`
-  color: white;
+  color: ${greenColor};
   font-family: 'Marlin Geo SQ Slant';
   font-size: 40px;
 `;
