@@ -1,26 +1,26 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Login from './src/pages/Login';
+// import libraries
 
-export default function App() {
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+// test pages
+import Test from './src/pages/Test';
+
+
+// navigation component
+
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    
-    <View style={styles.container}>
-      < Login />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator  initialRouteName="Login">
+      <Stack.Screen  name="Test" component={Test} options={{headerShown: true,}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'rgba(10, 14, 17, 1)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  textStyle: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
-    textAlign: 'center'
-  }
-});
+
+export default App;
