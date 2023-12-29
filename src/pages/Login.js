@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
     backgroundColor: blackColor,
   },
   imageStyled: {
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 250,
   },
   secondHalf: {
     flex: 1,
@@ -75,6 +75,7 @@ const Login = ({ onPress, title }) => {
             placeholder="username..."
             value={username}
             placeholderTextColor={greyColor}
+            onChangeText={(text) => setUsername(text)}
           />
           <TextInput
             style={styles.input}
@@ -82,6 +83,7 @@ const Login = ({ onPress, title }) => {
             secureTextEntry={true}
             value={password}
             placeholderTextColor={greyColor}
+            onChangeText={(text) => setPassword(text)}
           />
           <ClickableButton title="login" />
         </View>
