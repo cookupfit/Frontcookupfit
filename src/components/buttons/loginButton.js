@@ -1,36 +1,32 @@
 import React from 'react';
-import styled from 'styled-components/native';
-import { TouchableOpacity, Text, Alert } from 'react-native';
-// otherFile.js
-import {blackColor, greenColor, greyColor, whiteColor, redColor, yellowColor, FONT_BOLD} from '../../assets/colors';
-console.log(blackColor);
-// Create a styled button component
-const StyledButton = styled(TouchableOpacity)`
-  background-color: ${blackColor};
-  padding: 4% 0%;
-  margin: 10px;
-  border-radius: 40px;
-  width: 87%;
-  align-items: center;
-`;
+import { TouchableOpacity, Text, Alert, StyleSheet } from 'react-native';
+import { blackColor, greenColor, FONT_BOLD } from '../../assets/colors';
 
-// Create a styled text component for the button label
-const ButtonText = styled(Text)`
-  color: ${greenColor};
-  font-family: ${FONT_BOLD};
-  font-size: 30px;
-`;
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: blackColor,
+    width: '90%',
+    height: 70,
+    borderRadius: 40,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: greenColor,
+    fontFamily: FONT_BOLD,
+    fontSize: 30,
+    paddingTop: 12
+  },
+});
 
-// Functional component for the clickable button
 const ClickableButton = ({ title }) => {
   const handleButtonClick = () => {
     Alert.alert('Button Clicked!', 'You pressed the button.');
   };
 
   return (
-    <StyledButton onPress={handleButtonClick}>
-      <ButtonText>{title}</ButtonText>
-    </StyledButton>
+    <TouchableOpacity style={styles.button} onPress={handleButtonClick}>
+      <Text style={styles.buttonText}>{title}</Text>
+    </TouchableOpacity>
   );
 };
 
