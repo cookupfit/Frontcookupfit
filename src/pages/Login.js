@@ -25,20 +25,24 @@ const styles = StyleSheet.create({
   },
   card: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: greenColor,
     padding: 20,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
+    
   },
   // text is the label login
   label: {
     color: whiteColor,
     fontFamily: FONT_BOLD,
     fontSize: 40,
-    marginBottom: 20,
+    
   },
+  middle: {
+    width: '90%',
+  }
 });
 
 const Login = ({ onPress, title }) => {
@@ -59,10 +63,10 @@ const Login = ({ onPress, title }) => {
             
             <Text style={styles.label}>login</Text>
             
-            
+            <View style={styles.middle} >
             <Input  placeholder="username..."/>
             <Input placeholder="password..."/>
-            
+            </View>
             
             <ClickableButton title="login" />
             
