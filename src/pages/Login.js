@@ -56,8 +56,10 @@ const Login = ({ onPress, title }) => {
         <View style={styles.secondHalf}>
           <View style={styles.card}>
             <Text style={styles.label}>login</Text>
-            < Input placeholder="username..."/>
+            <View>
+            <Input placeholder="username..."/>
             <Input placeholder="password..."/>
+            </View>
             <ClickableButton title="login" />
           </View>
         </View>

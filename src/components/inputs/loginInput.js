@@ -18,16 +18,19 @@ const Input = ({ placeholder, value, onChangeText, secureTextEntry }) => {
 
 const styles = StyleSheet.create({
   input: {
-    width: '90%',
-    height: 60,
+    width: 320,
+    height: 70,
     borderColor: greyColor,
     borderWidth: 1,
     marginBottom: 20,
     borderRadius: 15,
-    paddingRight: 9,
+
+    paddingRight: 9, // Adjust padding as needed
+
     paddingLeft: 25,
     fontFamily: FONT_BOLD,
     fontSize: 30,
+    borderWidth: 4,
   },
 });
 
