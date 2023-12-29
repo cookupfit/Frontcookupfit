@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
   },
+  // text is the label login
   label: {
     color: whiteColor,
     fontFamily: FONT_BOLD,
@@ -55,12 +56,16 @@ const Login = ({ onPress, title }) => {
         </View>
         <View style={styles.secondHalf}>
           <View style={styles.card}>
+            
             <Text style={styles.label}>login</Text>
-            <View>
-            <Input placeholder="username..."/>
+            
+            
+            <Input  placeholder="username..."/>
             <Input placeholder="password..."/>
-            </View>
+            
+            
             <ClickableButton title="login" />
+            
           </View>
         </View>
       </ScrollView>
