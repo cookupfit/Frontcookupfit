@@ -16,6 +16,10 @@ export const h1_obj = {
 
 };
 
-``
+
+// styles.js or theme.js
+export const FONT_REGULAR = 'MarlinGeoSQSlant-SemiLight';
+export const FONT_BOLD = 'MarlinGeoSQSlant-Bold';
+
 
 

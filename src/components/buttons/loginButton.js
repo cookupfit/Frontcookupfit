@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components/native';
 import { TouchableOpacity, Text, Alert } from 'react-native';
 // otherFile.js
-import {blackColor, greenColor, greyColor, whiteColor, redColor, yellowColor,} from '../../assets/colors';
+import {blackColor, greenColor, greyColor, whiteColor, redColor, yellowColor, FONT_BOLD} from '../../assets/colors';
 console.log(blackColor);
 // Create a styled button component
 const StyledButton = styled(TouchableOpacity)`
@@ -12,13 +12,12 @@ const StyledButton = styled(TouchableOpacity)`
   border-radius: 40px;
   width: 100%;
   align-items: center;
-  
 `;
 
 // Create a styled text component for the button label
 const ButtonText = styled(Text)`
   color: ${greenColor};
-  font-family: 'Marlin Geo SQ Slant';
+  font-family: ${FONT_BOLD};
   font-size: 40px;
 `;
 

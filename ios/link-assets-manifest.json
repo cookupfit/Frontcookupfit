@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/MarlinGeoSQSlant-Bold.ttf",
+      "sha1": "20d33e1319f39e27f4cb5ea09feff38c68ed7d08"
+    },
+    {
+      "path": "src/assets/fonts/MarlinGeoSQSlant-SemiLight.ttf",
+      "sha1": "3d55e242f57697e81d6e7f232a5464a2444a9b0e"
+    }
+  ]
+}
