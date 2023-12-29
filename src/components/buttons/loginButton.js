@@ -7,10 +7,10 @@ console.log(blackColor);
 // Create a styled button component
 const StyledButton = styled(TouchableOpacity)`
   background-color: ${blackColor};
-  padding: 5% 0%;
+  padding: 4% 0%;
   margin: 10px;
   border-radius: 40px;
-  width: 100%;
+  width: 87%;
   align-items: center;
 `;
 
@@ -18,7 +18,7 @@ const StyledButton = styled(TouchableOpacity)`
 const ButtonText = styled(Text)`
   color: ${greenColor};
   font-family: ${FONT_BOLD};
-  font-size: 40px;
+  font-size: 30px;
 `;
 
 // Functional component for the clickable button

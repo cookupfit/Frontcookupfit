@@ -3,9 +3,6 @@ import { View, Image, TextInput, Text, StyleSheet } from 'react-native';
 import ClickableButton from '../components/buttons/loginButton';
 import { whiteColor, h1_obj, FONT_BOLD, greenColor, blackColor, greyColor } from '../assets/colors';
 
-
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -42,14 +39,22 @@ const styles = StyleSheet.create({
     color: whiteColor,
     fontFamily: FONT_BOLD,
     fontSize: 40,
-    
+    marginBottom: 20,
   },
   input: {
-    height: 40,
+    width: '90%', // Set the width to 100%
+    height: 60,
     borderColor: greyColor,
     borderWidth: 1,
-    marginBottom: 10,
-    borderRadius: 5,
+    marginBottom: 20,
+    borderRadius: 15,
+
+    paddingRight: 9, // Adjust padding as needed
+    
+    paddingLeft: 25,
+    fontFamily: FONT_BOLD,
+    fontSize: 30,
+    borderWidth: 4,
   },
 });
 
@@ -77,7 +82,6 @@ const Login = ({ onPress, title }) => {
             secureTextEntry={true}
             value={password}
             placeholderTextColor={greyColor}
-            
           />
           <ClickableButton title="login" />
         </View>
