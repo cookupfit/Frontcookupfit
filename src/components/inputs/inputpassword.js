@@ -15,7 +15,6 @@ const Input = ({ placeholder, value, onChangeText, secureTextEntry }) => {
   };
 
   const toggleSecureTextEntry = () => {
-    console.log('Input blurred');
     setIsSecure(!isSecure);
   };
 
