@@ -1,9 +1,14 @@
 // Login.js
+
+// import libraries
 import React, { useState } from 'react';
 import { View, Image, Text, StyleSheet, ScrollView, KeyboardAvoidingView } from 'react-native';
-import ClickableButton from '../components/buttons/loginButton';
 import { whiteColor, FONT_BOLD, greenColor, blackColor } from '../assets/colors';
-import Input from '../components/inputs/loginInput';
+
+// components import
+import ClickableButton from '../components/buttons/loginButton';
+import Inputusername from '../components/inputs/inputusername';
+import Inputpassword from '../components/inputs/inputpassword';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,10 +24,13 @@ const styles = StyleSheet.create({
     width: 250,
     height: 250,
   },
+  
   secondHalf: {
     flex: 1,
     backgroundColor: blackColor,
   },
+
+  // card that have clolor green
   card: {
     flex: 1,
     justifyContent: 'space-around',
@@ -50,10 +58,12 @@ const Login = ({ onPress, title }) => {
   const [password, setPassword] = useState('');
 
   return (
+    // KeyboardAvoidingView for risponsive keyboard
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
+      {/* scroll biew for rispensive */}
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View style={styles.firstHalf}>
           <Image style={styles.imageStyled} source={require('../../src/assets/img/logo.png')} />
@@ -61,13 +71,23 @@ const Login = ({ onPress, title }) => {
         <View style={styles.secondHalf}>
           <View style={styles.card}>
             
+            {/* login text */}
             <Text style={styles.label}>login</Text>
             
-            
-            <Input  placeholder="username..."/>
-            <Input placeholder="password..."/>
-            
-            
+            {/* login inputs */}
+            <Inputusername
+            value={username}
+            onChangeText={(text) => setUsername(text)}
+            placeholder="username..."/>
+            <Inputpassword
+            secureTextEntry
+            onChangeText={(text) => setPassword(text)}
+            value={password}
+            placeholder="password..."
+            />
+
+
+            {/* login button */}
             <ClickableButton title="login" />
             
           </View>

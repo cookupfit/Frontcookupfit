@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, Alert, StyleSheet } from 'react-native';
-import { blackColor, greenColor, FONT_BOLD } from '../../assets/colors';
-
+import { blackColor, greenColor, FONT_BOLD, whiteColor } from '../../assets/colors';
+import { useNavigation } from '@react-navigation/native';
 const styles = StyleSheet.create({
   button: {
     backgroundColor: blackColor,
@@ -19,8 +19,10 @@ const styles = StyleSheet.create({
 });
 
 const ClickableButton = ({ title }) => {
+  const navigation = useNavigation(); // Use the useNavigation hook to get the navigation object
+
   const handleButtonClick = () => {
-    Alert.alert('Button Clicked!', 'You pressed the button.');
+    navigation.navigate('Main');
   };
 
   return (
