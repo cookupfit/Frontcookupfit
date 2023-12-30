@@ -18,11 +18,10 @@ const Input = ({ placeholder, value, onChangeText, secureTextEntry }) => {
 
 const styles = StyleSheet.create({
   input: {
-    
+    width: '90%',
     height: 70,
     borderColor: greyColor,
     borderWidth: 1,
-    marginBottom: 20,
     borderRadius: 15,
 
     paddingRight: 9, // Adjust padding as needed

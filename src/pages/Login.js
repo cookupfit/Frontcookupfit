@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     
   },
   middle: {
-    width: '90%',
+    
   }
 });
 
@@ -63,10 +63,10 @@ const Login = ({ onPress, title }) => {
             
             <Text style={styles.label}>login</Text>
             
-            <View style={styles.middle} >
+            
             <Input  placeholder="username..."/>
             <Input placeholder="password..."/>
-            </View>
+            
             
             <ClickableButton title="login" />
             
