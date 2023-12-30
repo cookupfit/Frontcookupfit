@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
-    
+    flexDirection: 'column',
     
   },
   // text is the label login
@@ -49,6 +49,12 @@ const styles = StyleSheet.create({
     fontSize: 40,
     
   },
+
+  centredItems: {
+    width: "100%", 
+    alignItems: 'center',
+  },
+
   middle: {
     
   }
@@ -73,24 +79,28 @@ const Login = ({ onPress, title }) => {
           <View style={styles.card}>
             
             {/* login text */}
-            <Text style={styles.label}>login</Text>
-            
+            <View style={styles.centredItems}>
+              <Text style={styles.label}>login</Text>
+            </View>
             {/* login inputs */}
-            <Inputusername
-            value={username}
-            onChangeText={(text) => setUsername(text)}
-            placeholder="username..."/>
-            <Inputpassword
-            secureTextEntry
-            onChangeText={(text) => setPassword(text)}
-            value={password}
-            placeholder="password..."
-            />
+            <View style={styles.centredItems}>
+              <Inputusername
+              value={username}
+              onChangeText={(text) => setUsername(text)}
+              placeholder="username..."/>
+            </View>
+            <View style={styles.centredItems}>
+              <Inputpassword
+              secureTextEntry
+              onChangeText={(text) => setPassword(text)}
+              value={password}
+              placeholder="password..."
+              />
+            </View>
 
-
-            {/* login button */}
-            <ClickableButton title="login" />
-            
+            <View style={styles.centredItems}>
+              <ClickableButton title="login" />
+            </View>
           </View>
         </View>
       </ScrollView>
