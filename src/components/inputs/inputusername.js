@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     fontFamily: FONT_BOLD,
     fontSize: 30,
     borderWidth: 4,
+    
   },
 });
 

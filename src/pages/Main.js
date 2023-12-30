@@ -7,7 +7,7 @@ const Main = () => {
   const series = [75, 25]; // Adjust these values based on your data
   const sliceColor = ['rgb(255, 99, 132)', 'rgb(255, 205, 86)']; // Adjust these colors based on your data
 
-  
+  //
 
   return (
     <View style={styles.container}>

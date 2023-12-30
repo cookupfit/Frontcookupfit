@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
     
+    
   },
   // text is the label login
   label: {
