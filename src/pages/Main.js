@@ -4,6 +4,7 @@ import PieChart from 'react-native-pie-chart';
 import { FONT_REGULAR, greenColor } from '../assets/colors';
 
 const Main = () => {
+  // circle 
   const widthAndHeight = 200;
   const series = [75, 25];
   const sliceColor = ['rgb(255, 99, 132)', 'rgb(255, 205, 86)'];
