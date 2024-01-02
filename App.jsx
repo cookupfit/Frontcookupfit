@@ -40,10 +40,10 @@ function App() {
   return (
     <NavigationContainer>
       {/* test component for initialRouteName */}
-      <Stack.Navigator  initialRouteName="Login">
+      <Stack.Navigator  initialRouteName="Test">
 
       {/* main components */}
-      <Stack.Screen  name="Test" component={Test} options={{headerShown: true,}}/>
+      <Stack.Screen  name="Test" component={Test} options={{headerShown: false,}}/>
       <Stack.Screen  name="Login" component={Login} options={{headerShown: false,}}/>
       <Stack.Screen  name="Main" component={Main} options={{headerShown: false,}}/>
       <Stack.Screen  name="Profile" component={Profile} options={{headerShown: true,}}/>
