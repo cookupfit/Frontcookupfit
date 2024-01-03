@@ -15,6 +15,7 @@ import Profile from './src/pages/Profile';
 import Settings from './src/pages/Settings';
 import Diets from './src/pages/Diets';
 
+
 // import managment pages
 import Createpaiment from './src/pages/managment/Createpaiment';
 import Createuser from './src/pages/managment/Createuser';
@@ -40,7 +41,7 @@ function App() {
   return (
     <NavigationContainer>
       {/* test component for initialRouteName */}
-      <Stack.Navigator  initialRouteName="Test">
+      <Stack.Navigator  initialRouteName="Main">
 
       {/* main components */}
       <Stack.Screen  name="Test" component={Test} options={{headerShown: false,}}/>
