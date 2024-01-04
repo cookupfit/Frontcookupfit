@@ -37,8 +37,26 @@ const Main = () => {
       renderNavigationView={() => (
         <View style={{flex: 1, backgroundColor: 'rgba(45, 231, 44, 1)'}}>
           {/* Add your drawer content here */}
-          <Text>Drawer Content</Text>
+          <View style={{alignItems:'center'}}>
+          <Image
+            style={{height: 130, width: 130, marginRight: 5}}
+            source={require('../../src/assets/img/avtar.png')}
+          />
+          <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '10%' }}>
+        <Text style={{ color: 'white', textAlign: 'center' }}>profile</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '10%' }}>
+        <Text style={{ color: 'white', textAlign: 'center' }}>plans</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '10%' }}>
+        <Text style={{ color: 'white', textAlign: 'center' }}>settings</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '10%' }}>
+        <Text style={{ color: 'white', textAlign: 'center' }}>logout</Text>
+      </TouchableOpacity>
         </View>
+          </View>
+          
       )}>
       <View style={styles.container}>
         <View
