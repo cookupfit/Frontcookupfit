@@ -35,28 +35,68 @@ const Main = () => {
       drawerWidth={320}
       drawerPosition="Left"
       renderNavigationView={() => (
-        <View style={{flex: 1, backgroundColor: 'rgba(45, 231, 44, 1)'}}>
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: 'rgba(45, 231, 44, 1)',
+            justifyContent: 'center',
+          }}>
           {/* Add your drawer content here */}
-          <View style={{alignItems:'center'}}>
-          <Image
-            style={{height: 130, width: 130, marginRight: 5}}
-            source={require('../../src/assets/img/avtar.png')}
-          />
-          <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '10%' }}>
-        <Text style={{ color: 'white', textAlign: 'center' }}>profile</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '10%' }}>
-        <Text style={{ color: 'white', textAlign: 'center' }}>plans</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '10%' }}>
-        <Text style={{ color: 'white', textAlign: 'center' }}>settings</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '10%' }}>
-        <Text style={{ color: 'white', textAlign: 'center' }}>logout</Text>
-      </TouchableOpacity>
-        </View>
+          <View style={{alignItems: 'center', justifyContent: 'space-between'}}>
+            <View style={{marginBottom: 70, alignItems: 'center',}}>
+              <Image
+                style={{
+                  height: 130,
+                  width: 130,
+                  marginBottom: 20,
+                  borderWidth: 3,
+                  borderColor: 'rgba(10, 14, 17, 1)',
+                  borderRadius: 70,
+                }}
+                source={require('../../src/assets/img/avtar.png')}
+              />
+              <Text>gymfit</Text>
+            </View>
+            <TouchableOpacity
+              style={{
+                backgroundColor: 'rgba(55, 55, 55, 1)',
+                borderRadius: 20,
+                width: '40%',
+                height: '10%',
+              }}>
+              <Text style={{color: 'white', textAlign: 'center'}}>profile</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                backgroundColor: 'rgba(55, 55, 55, 1)',
+                borderRadius: 20,
+                width: '40%',
+                height: '10%',
+              }}>
+              <Text style={{color: 'white', textAlign: 'center'}}>plans</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                backgroundColor: 'rgba(55, 55, 55, 1)',
+                borderRadius: 20,
+                width: '40%',
+                height: '10%',
+              }}>
+              <Text style={{color: 'white', textAlign: 'center'}}>
+                settings
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                backgroundColor: 'rgba(55, 55, 55, 1)',
+                borderRadius: 20,
+                width: '40%',
+                height: '10%',
+              }}>
+              <Text style={{color: 'white', textAlign: 'center'}}>logout</Text>
+            </TouchableOpacity>
           </View>
-          
+        </View>
       )}>
       <View style={styles.container}>
         <View
@@ -66,7 +106,7 @@ const Main = () => {
             justifyContent: 'space-between',
             width: '95%',
             flex: 0.5,
-            alignItems:'center'
+            alignItems: 'center',
           }}>
           {/* Your existing content */}
 
@@ -78,55 +118,103 @@ const Main = () => {
             source={require('../../src/assets/img/avtar.png')}
           />
         </View>
-        <View style={{backgroundColor: 'black', width: '95%', flex: 2.5, alignItems:'center' }}>
-        <View style={styles.chartContainer}>
-          {/* Button to open drawer */}
+        <View
+          style={{
+            backgroundColor: 'black',
+            width: '95%',
+            flex: 2.5,
+            alignItems: 'center',
+          }}>
+          <View style={styles.chartContainer}>
+            {/* Button to open drawer */}
 
-          <View style={styles.data}>
-            <View style={styles.pay}>
-              <PieChart
-                style={styles.pieChart}
-                widthAndHeight={widthAndHeightred}
-                series={red}
-                sliceColor={sliceColor}
-              />
-              <Text style={styles.label}>Payment Pending</Text>
+            <View style={styles.data}>
+              <View style={styles.pay}>
+                <PieChart
+                  style={styles.pieChart}
+                  widthAndHeight={widthAndHeightred}
+                  series={red}
+                  sliceColor={sliceColor}
+                />
+                <Text style={styles.label}>Payment Pending</Text>
+              </View>
+              <View style={[styles.pay, {marginTop: 30}]}>
+                <PieChart
+                  style={styles.pieChart}
+                  widthAndHeight={widthAndHeightyellow}
+                  series={yellow}
+                  sliceColor={sliceColor}
+                />
+                <Text style={styles.label}>Payment Pending</Text>
+              </View>
             </View>
-            <View style={[styles.pay, {marginTop: 30}]}>
-              <PieChart
-                style={styles.pieChart}
-                widthAndHeight={widthAndHeightyellow}
-                series={yellow}
-                sliceColor={sliceColor}
-              />
-              <Text style={styles.label}>Payment Pending</Text>
-            </View>
+            <PieChart
+              widthAndHeight={widthAndHeight}
+              series={series}
+              sliceColor={sliceColor}
+            />
           </View>
-          <PieChart
-            widthAndHeight={widthAndHeight}
-            series={series}
-            sliceColor={sliceColor}
-          />
         </View>
-        </View>
-        <View style={{backgroundColor: 'purple', width: '95%', flex: 2.5, alignItems: 'center', justifyContent: 'center', justifyContent: 'space-around' }}>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between', borderWidth: 3, borderColor: 'green', borderRadius: 20, width: '95%',
-    height: '25%', alignItems: 'center'}}>
-            <Text>members</Text><Text>230</Text>
-            
+        <View
+          style={{
+            backgroundColor: 'purple',
+            width: '95%',
+            flex: 2.5,
+            alignItems: 'center',
+            justifyContent: 'center',
+            justifyContent: 'space-around',
+          }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              borderWidth: 3,
+              borderColor: 'green',
+              borderRadius: 20,
+              width: '95%',
+              height: '25%',
+              alignItems: 'center',
+            }}>
+            <Text>members</Text>
+            <Text>230</Text>
           </View>
-          <TouchableOpacity style={{ backgroundColor: 'rgba(45, 231, 44, 1)', borderRadius: 20, width: '90%', height: '35%' }}>
-        <Text style={{ color: 'white', textAlign: 'center' }}>managment</Text>
-      </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: 'rgba(45, 231, 44, 1)',
+              borderRadius: 20,
+              width: '90%',
+              height: '35%',
+            }}>
+            <Text style={{color: 'white', textAlign: 'center'}}>managment</Text>
+          </TouchableOpacity>
         </View>
-        <View style={{backgroundColor: 'yellow', width: '95%', flex: 1.5, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around',}}>
-        <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '60%' }}>
-        <Text style={{ color: 'white', textAlign: 'center' }}>managment</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '60%' }}>
-        <Text style={{ color: 'white', textAlign: 'center' }}>managment</Text>
-      </TouchableOpacity>
-      
+        <View
+          style={{
+            backgroundColor: 'yellow',
+            width: '95%',
+            flex: 1.5,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+          }}>
+          <TouchableOpacity
+            style={{
+              backgroundColor: 'rgba(55, 55, 55, 1)',
+              borderRadius: 20,
+              width: '40%',
+              height: '60%',
+            }}>
+            <Text style={{color: 'white', textAlign: 'center'}}>managment</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: 'rgba(55, 55, 55, 1)',
+              borderRadius: 20,
+              width: '40%',
+              height: '60%',
+            }}>
+            <Text style={{color: 'white', textAlign: 'center'}}>managment</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </DrawerLayoutAndroid>
@@ -148,7 +236,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: greenColor,
     borderRadius: 45,
-    
   },
   label: {
     color: 'white',
