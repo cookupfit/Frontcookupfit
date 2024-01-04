@@ -91,14 +91,24 @@ const Main = () => {
           />
         </View>
         </View>
-        <View style={{backgroundColor: 'purple', width: '95%', flex: 2.5, alignItems: 'center' }}>
+        <View style={{backgroundColor: 'purple', width: '95%', flex: 2.5, alignItems: 'center', justifyContent: 'center', justifyContent: 'space-around' }}>
           <View style={{flexDirection: 'row', justifyContent: 'space-between', borderWidth: 3, borderColor: 'green', borderRadius: 20, width: '95%',
     height: '25%', alignItems: 'center'}}>
             <Text>members</Text><Text>230</Text>
+            
           </View>
+          <TouchableOpacity style={{ backgroundColor: 'rgba(45, 231, 44, 1)', borderRadius: 20, width: '90%', height: '35%' }}>
+        <Text style={{ color: 'white', textAlign: 'center' }}>managment</Text>
+      </TouchableOpacity>
         </View>
-        <View style={{backgroundColor: 'yellow', width: '95%', flex: 1.5}}>
-        <Text>test</Text>
+        <View style={{backgroundColor: 'yellow', width: '95%', flex: 1.5, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around',}}>
+        <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '60%' }}>
+        <Text style={{ color: 'white', textAlign: 'center' }}>managment</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ backgroundColor: 'rgba(55, 55, 55, 1)', borderRadius: 20, width: '40%', height: '60%' }}>
+        <Text style={{ color: 'white', textAlign: 'center' }}>managment</Text>
+      </TouchableOpacity>
+      
         </View>
       </View>
     </DrawerLayoutAndroid>
