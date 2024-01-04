@@ -5,6 +5,7 @@ import {
   Text,
   DrawerLayoutAndroid,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import PieChart from 'react-native-pie-chart';
 import {FONT_REGULAR, greenColor} from '../assets/colors';
@@ -34,19 +35,29 @@ const Main = () => {
       drawerWidth={320}
       drawerPosition="Left"
       renderNavigationView={() => (
-        <View style={{flex: 1, backgroundColor: '#fff'}}>
+        <View style={{flex: 1, backgroundColor: 'rgba(45, 231, 44, 1)'}}>
           {/* Add your drawer content here */}
           <Text>Drawer Content</Text>
         </View>
       )}>
       <View style={styles.container}>
-        <View style={{backgroundColor:'red'}}>
+        <View
+          style={{
+            backgroundColor: 'red',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: '95%',
+          }}>
           {/* Your existing content */}
+
           <TouchableOpacity onPress={openDrawer} style={styles.drawerButton}>
             <Text style={styles.drawerButtonText}>Open Drawer</Text>
           </TouchableOpacity>
+          <Image
+            style={{height: 49, width: 50, marginRight: 5}}
+            source={require('../../src/assets/img/avtar.png')}
+          />
         </View>
-
         <View style={styles.chartContainer}>
           {/* Button to open drawer */}
 
@@ -76,6 +87,12 @@ const Main = () => {
             sliceColor={sliceColor}
           />
         </View>
+        <View style={{backgroundColor: 'purple',}}>
+          <Text>test</Text>
+        </View>
+        <View style={{backgroundColor: 'yellow',}}>
+        <Text>test</Text>
+        </View>
       </View>
     </DrawerLayoutAndroid>
   );
@@ -96,6 +113,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: greenColor,
     borderRadius: 45,
+    
   },
   label: {
     color: 'white',
