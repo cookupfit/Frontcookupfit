@@ -91,8 +91,11 @@ const Main = () => {
           />
         </View>
         </View>
-        <View style={{backgroundColor: 'purple', width: '95%', flex: 2.5 }}>
-          <Text>test</Text>
+        <View style={{backgroundColor: 'purple', width: '95%', flex: 2.5, alignItems: 'center' }}>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between', borderWidth: 3, borderColor: 'green', borderRadius: 20, width: '95%',
+    height: '25%', alignItems: 'center'}}>
+            <Text>members</Text><Text>230</Text>
+          </View>
         </View>
         <View style={{backgroundColor: 'yellow', width: '95%', flex: 1.5}}>
         <Text>test</Text>
