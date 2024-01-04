@@ -47,6 +47,8 @@ const Main = () => {
             flexDirection: 'row',
             justifyContent: 'space-between',
             width: '95%',
+            flex: 0.5,
+            alignItems:'center'
           }}>
           {/* Your existing content */}
 
@@ -58,6 +60,7 @@ const Main = () => {
             source={require('../../src/assets/img/avtar.png')}
           />
         </View>
+        <View style={{backgroundColor: 'black', width: '95%', flex: 2.5, alignItems:'center' }}>
         <View style={styles.chartContainer}>
           {/* Button to open drawer */}
 
@@ -87,10 +90,11 @@ const Main = () => {
             sliceColor={sliceColor}
           />
         </View>
-        <View style={{backgroundColor: 'purple',}}>
+        </View>
+        <View style={{backgroundColor: 'purple', width: '95%', flex: 2.5 }}>
           <Text>test</Text>
         </View>
-        <View style={{backgroundColor: 'yellow',}}>
+        <View style={{backgroundColor: 'yellow', width: '95%', flex: 1.5}}>
         <Text>test</Text>
         </View>
       </View>
@@ -108,8 +112,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    width: '95%',
-    height: '33%',
+    width: '100%',
+    height: '95%',
     borderWidth: 2,
     borderColor: greenColor,
     borderRadius: 45,
