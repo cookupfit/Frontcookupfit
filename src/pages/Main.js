@@ -101,7 +101,6 @@ const Main = () => {
       <View style={styles.container}>
         <View
           style={{
-            
             backgroundColor: 'red',
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -110,9 +109,22 @@ const Main = () => {
             alignItems: 'center',
           }}>
           {/* Your existing content */}
-          <View>
+          <View
+            style={{
+              height: 58,
+              width: 59,
+              marginRight: 5,
+              borderWidth: 3,
+              borderColor: 'rgba(55, 55, 55, 1)',
+              borderRadius: 70,
+              alignItems: 'center',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}>
             <TouchableOpacity onPress={openDrawer} style={styles.drawerButton}>
-              <Text style={styles.drawerButtonText}>Open Drawer</Text>
+              <View style={styles.line}></View>
+              <View style={styles.line}></View>
+              <View style={styles.line}></View>
             </TouchableOpacity>
           </View>
 
@@ -273,14 +285,22 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   drawerButton: {
-    backgroundColor: 'blue',
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 10,
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    borderRadius: 70,
+    height: 54,
+    width: 54,
   },
   drawerButtonText: {
     color: 'white',
     textAlign: 'center',
+  },
+  line: {
+    height: 3,
+    width: '80%', // Adjust the width of the lines as needed
+    backgroundColor: 'white', // You can customize the color
+    marginVertical: 5,
   },
 });
 
