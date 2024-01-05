@@ -11,7 +11,7 @@ import PieChart from 'react-native-pie-chart';
 import {FONT_REGULAR, greenColor} from '../assets/colors';
 
 const Main = () => {
-  const widthAndHeight = 200;
+  const widthAndHeight = 150;
   const series = [75, 25];
   const sliceColor = ['rgb(255, 99, 132)', 'rgb(255, 205, 86)'];
   const widthAndHeightred = 10;
@@ -101,7 +101,6 @@ const Main = () => {
       <View style={styles.container}>
         <View
           style={{
-            backgroundColor: 'red',
             flexDirection: 'row',
             justifyContent: 'space-between',
             width: '95%',
@@ -120,11 +119,12 @@ const Main = () => {
               alignItems: 'center',
               flexDirection: 'column',
               justifyContent: 'center',
+              marginLeft: 5,
             }}>
             <TouchableOpacity onPress={openDrawer} style={styles.drawerButton}>
-              <View style={styles.line}></View>
-              <View style={styles.line}></View>
-              <View style={styles.line}></View>
+              <View style={styles.line_1}></View>
+              <View style={styles.line_2}></View>
+              <View style={styles.line_3}></View>
             </TouchableOpacity>
           </View>
 
@@ -148,12 +148,23 @@ const Main = () => {
         </View>
         <View
           style={{
-            backgroundColor: 'black',
+            backgroundColor: 'red',
             width: '95%',
             flex: 2.5,
             alignItems: 'center',
           }}>
-          <View style={styles.chartContainer}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+              width: '100%',
+              height: '80%',
+              borderWidth: 2,
+              borderColor: greenColor,
+              borderRadius: 45,
+              backgroundColor: 'purple',
+            }}>
             {/* Button to open drawer */}
 
             <View style={styles.data}>
@@ -164,7 +175,7 @@ const Main = () => {
                   series={red}
                   sliceColor={sliceColor}
                 />
-                <Text style={styles.label}>Payment Pending</Text>
+                <Text style={styles.label}>35% Pending</Text>
               </View>
               <View style={[styles.pay, {marginTop: 30}]}>
                 <PieChart
@@ -173,7 +184,7 @@ const Main = () => {
                   series={yellow}
                   sliceColor={sliceColor}
                 />
-                <Text style={styles.label}>Payment Pending</Text>
+                <Text style={styles.label}>88% Required</Text>
               </View>
             </View>
             <PieChart
@@ -255,16 +266,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'rgba(10, 14, 17, 1)',
   },
-  chartContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    width: '100%',
-    height: '95%',
-    borderWidth: 2,
-    borderColor: greenColor,
-    borderRadius: 45,
-  },
+  chartContainer: {},
   label: {
     color: 'white',
     fontFamily: FONT_REGULAR,
@@ -292,15 +294,27 @@ const styles = StyleSheet.create({
     height: 54,
     width: 54,
   },
-  drawerButtonText: {
-    color: 'white',
-    textAlign: 'center',
-  },
-  line: {
+
+  line_1: {
     height: 3,
-    width: '80%', // Adjust the width of the lines as needed
+    width: '55%', // Adjust the width of the lines as needed
     backgroundColor: 'white', // You can customize the color
-    marginVertical: 5,
+    marginVertical: 1.5,
+    borderRadius: 2,
+  },
+  line_2: {
+    height: 3,
+    width: '40%', // Adjust the width of the lines as needed
+    backgroundColor: 'white', // You can customize the color
+    marginVertical: 1.5,
+    borderRadius: 2,
+  },
+  line_3: {
+    height: 3,
+    width: '25%', // Adjust the width of the lines as needed
+    backgroundColor: 'white', // You can customize the color
+    marginVertical: 1.5,
+    borderRadius: 2,
   },
 });
 
