@@ -43,7 +43,7 @@ const Main = () => {
           }}>
           {/* Add your drawer content here */}
           <View style={{alignItems: 'center', justifyContent: 'space-between'}}>
-            <View style={{marginBottom: 70, alignItems: 'center',}}>
+            <View style={{marginBottom: 70, alignItems: 'center'}}>
               <Image
                 style={{
                   height: 130,
@@ -101,22 +101,38 @@ const Main = () => {
       <View style={styles.container}>
         <View
           style={{
+            
             backgroundColor: 'red',
             flexDirection: 'row',
             justifyContent: 'space-between',
             width: '95%',
-            flex: 0.5,
+            flex: 0.7,
             alignItems: 'center',
           }}>
           {/* Your existing content */}
+          <View>
+            <TouchableOpacity onPress={openDrawer} style={styles.drawerButton}>
+              <Text style={styles.drawerButtonText}>Open Drawer</Text>
+            </TouchableOpacity>
+          </View>
 
-          <TouchableOpacity onPress={openDrawer} style={styles.drawerButton}>
-            <Text style={styles.drawerButtonText}>Open Drawer</Text>
-          </TouchableOpacity>
-          <Image
-            style={{height: 49, width: 50, marginRight: 5}}
-            source={require('../../src/assets/img/avtar.png')}
-          />
+          <View
+            style={{
+              height: 58,
+              width: 59,
+              marginRight: 5,
+              borderWidth: 3,
+              borderColor: 'rgba(55, 55, 55, 1)',
+              borderRadius: 70,
+              alignItems: 'center',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}>
+            <Image
+              style={{height: 46, width: 47}}
+              source={require('../../src/assets/img/avtar.png')}
+            />
+          </View>
         </View>
         <View
           style={{
