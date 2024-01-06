@@ -8,9 +8,12 @@ import {
   Image,
 } from 'react-native';
 import PieChart from 'react-native-pie-chart';
-import {FONT_REGULAR, greenColor} from '../assets/colors';
+import {FONT_REGULAR, FONT_BOLD, greenColor} from '../assets/colors';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faUser} from '@fortawesome/free-solid-svg-icons/faUser';
+import {faUsersGear} from '@fortawesome/free-solid-svg-icons/faUsersGear';
+import {faClipboard} from '@fortawesome/free-solid-svg-icons/faClipboard';
+
 
 const Main = () => {
   const widthAndHeight = 170;
@@ -245,9 +248,15 @@ const Main = () => {
               }}>
               members
             </Text>
-            <Text style={{color: 'white',color: 'white',
+            <Text
+              style={{
+                color: 'white',
+                color: 'white',
                 fontFamily: FONT_REGULAR,
-                fontSize: 22,}}>230</Text>
+                fontSize: 22,
+              }}>
+              230
+            </Text>
           </View>
           <TouchableOpacity
             style={{
@@ -255,8 +264,18 @@ const Main = () => {
               borderRadius: 20,
               width: '90%',
               height: '35%',
+              justifyContent: 'center'
             }}>
-            <Text style={{color: 'white', textAlign: 'center'}}>managment</Text>
+              <FontAwesomeIcon icon={faUsersGear} />
+            <Text
+              style={{
+                color: 'rgba(10, 14, 17, 1)',
+                textAlign: 'center',
+                fontFamily: FONT_BOLD,
+                fontSize: 30,
+              }}>
+              managment
+            </Text>
           </TouchableOpacity>
         </View>
         <View
@@ -275,7 +294,8 @@ const Main = () => {
               width: '40%',
               height: '60%',
             }}>
-            <Text style={{color: 'white', textAlign: 'center'}}>managment</Text>
+              <FontAwesomeIcon icon={faClipboard} />
+            <Text style={{color: 'white', textAlign: 'center'}}>programs</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={{
@@ -284,7 +304,8 @@ const Main = () => {
               width: '40%',
               height: '60%',
             }}>
-            <Text style={{color: 'white', textAlign: 'center'}}>managment</Text>
+              
+            <Text style={{color: 'white', textAlign: 'center'}}>diet</Text>
           </TouchableOpacity>
         </View>
       </View>
