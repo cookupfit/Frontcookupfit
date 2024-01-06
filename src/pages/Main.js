@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import PieChart from 'react-native-pie-chart';
 import {FONT_REGULAR, greenColor} from '../assets/colors';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faUser} from '@fortawesome/free-solid-svg-icons/faUser';
 
 const Main = () => {
   const widthAndHeight = 170;
@@ -47,7 +49,7 @@ const Main = () => {
               <Image
                 style={{
                   height: 130,
-                  width: 130, 
+                  width: 130,
                   borderWidth: 3,
                   borderColor: 'rgba(10, 14, 17, 1)',
                   borderRadius: 70,
@@ -150,7 +152,7 @@ const Main = () => {
         </View>
         <View
           style={{
-           // red is here 🟥
+            // red is here 🟥
             width: '95%',
             flex: 2.4,
             alignItems: 'center',
@@ -226,7 +228,7 @@ const Main = () => {
           <View
             style={{
               flexDirection: 'row',
-              justifyContent: 'space-between',
+              justifyContent: 'space-around',
               borderWidth: 3,
               borderColor: 'rgba(55, 55, 55, 1)',
               borderRadius: 20,
@@ -234,8 +236,18 @@ const Main = () => {
               height: '25%',
               alignItems: 'center',
             }}>
-            <Text style={{color: 'white'}}>members</Text>
-            <Text style={{color: 'white'}}>230</Text>
+            <FontAwesomeIcon icon={faUser} style={{color: 'white'}} size={24} />
+            <Text
+              style={{
+                color: 'white',
+                fontFamily: FONT_REGULAR,
+                fontSize: 23,
+              }}>
+              members
+            </Text>
+            <Text style={{color: 'white',color: 'white',
+                fontFamily: FONT_REGULAR,
+                fontSize: 22,}}>230</Text>
           </View>
           <TouchableOpacity
             style={{
