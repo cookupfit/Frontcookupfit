@@ -11,11 +11,11 @@ import PieChart from 'react-native-pie-chart';
 import {FONT_REGULAR, greenColor} from '../assets/colors';
 
 const Main = () => {
-  const widthAndHeight = 150;
+  const widthAndHeight = 170;
   const series = [75, 25];
   const sliceColor = ['rgb(255, 99, 132)', 'rgb(255, 205, 86)'];
-  const widthAndHeightred = 10;
-  const widthAndHeightyellow = 10;
+  const widthAndHeightred = 16;
+  const widthAndHeightyellow = 16;
   const red = [100, 0];
   const yellow = [0, 100];
 
@@ -104,8 +104,10 @@ const Main = () => {
             flexDirection: 'row',
             justifyContent: 'space-between',
             width: '95%',
-            flex: 0.7,
+            flex: 0.8,
             alignItems: 'center',
+            backgroundColor: 'yellow',
+            
           }}>
           {/* Your existing content */}
           <View
@@ -120,6 +122,7 @@ const Main = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               marginLeft: 5,
+              alignSelf: 'flex-end',
             }}>
             <TouchableOpacity onPress={openDrawer} style={styles.drawerButton}>
               <View style={styles.line_1}></View>
@@ -139,6 +142,7 @@ const Main = () => {
               alignItems: 'center',
               flexDirection: 'column',
               justifyContent: 'center',
+              alignSelf: 'flex-end',
             }}>
             <Image
               style={{height: 46, width: 47}}
@@ -150,9 +154,11 @@ const Main = () => {
           style={{
             backgroundColor: 'red',
             width: '95%',
-            flex: 2.5,
+            flex: 2.4,
             alignItems: 'center',
+            justifyContent: 'space-around',
           }}>
+          {/*chart need to be fix*/}
           <View
             style={{
               flexDirection: 'row',
@@ -167,21 +173,31 @@ const Main = () => {
             }}>
             {/* Button to open drawer */}
 
-            <View style={styles.data}>
-              <View style={styles.pay}>
+            <View style={{justifyContent: 'space-between', height: '35%', width: '32%'}}>
+              <View style={{
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                flexDirection: 'row',
+                backgroundColor: 'black'
+              }}>
                 <PieChart
                   style={styles.pieChart}
                   widthAndHeight={widthAndHeightred}
-                  series={red}
+                  series={yellow}
                   sliceColor={sliceColor}
                 />
                 <Text style={styles.label}>35% Pending</Text>
               </View>
-              <View style={[styles.pay, {marginTop: 30}]}>
+              <View style={{
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                flexDirection: 'row',
+                backgroundColor: 'black'
+              }}>
                 <PieChart
                   style={styles.pieChart}
                   widthAndHeight={widthAndHeightyellow}
-                  series={yellow}
+                  series={red}
                   sliceColor={sliceColor}
                 />
                 <Text style={styles.label}>88% Required</Text>
@@ -266,25 +282,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'rgba(10, 14, 17, 1)',
   },
-  chartContainer: {},
+  
   label: {
     color: 'white',
     fontFamily: FONT_REGULAR,
     fontSize: 15,
-    marginLeft: 15,
-  },
-  data: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-  },
-  pay: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginRight: 10,
-  },
-  pieChart: {
-    marginRight: 5,
   },
   drawerButton: {
     alignItems: 'center',
