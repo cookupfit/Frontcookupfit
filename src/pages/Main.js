@@ -47,8 +47,7 @@ const Main = () => {
               <Image
                 style={{
                   height: 130,
-                  width: 130,
-                  marginBottom: 20,
+                  width: 130, 
                   borderWidth: 3,
                   borderColor: 'rgba(10, 14, 17, 1)',
                   borderRadius: 70,
@@ -144,7 +143,7 @@ const Main = () => {
               alignSelf: 'flex-end',
             }}>
             <Image
-              style={{height: 46, width: 47}}
+              style={{height: 42, width: 42}}
               source={require('../../src/assets/img/avtar.png')}
             />
           </View>
