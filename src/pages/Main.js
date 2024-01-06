@@ -106,8 +106,7 @@ const Main = () => {
             width: '95%',
             flex: 0.8,
             alignItems: 'center',
-            backgroundColor: 'yellow',
-            
+            // yellow is here 🟨
           }}>
           {/* Your existing content */}
           <View
@@ -152,7 +151,7 @@ const Main = () => {
         </View>
         <View
           style={{
-            backgroundColor: 'red',
+           // red is here 🟥
             width: '95%',
             flex: 2.4,
             alignItems: 'center',
@@ -169,38 +168,44 @@ const Main = () => {
               borderWidth: 2,
               borderColor: greenColor,
               borderRadius: 45,
-              backgroundColor: 'purple',
             }}>
             {/* Button to open drawer */}
 
-            <View style={{justifyContent: 'space-between', height: '35%', width: '32%'}}>
-              <View style={{
+            <View
+              style={{
                 justifyContent: 'space-between',
-                alignItems: 'center',
-                flexDirection: 'row',
-                backgroundColor: 'black'
+                height: '35%',
+                width: '32%',
               }}>
+              <View
+                style={{
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  flexDirection: 'row',
+                }}>
                 <PieChart
                   style={styles.pieChart}
                   widthAndHeight={widthAndHeightred}
                   series={yellow}
                   sliceColor={sliceColor}
                 />
-                <Text style={styles.label}>35% Pending</Text>
+                <Text style={styles.label}>35%</Text>
+                <Text style={styles.label}>Pending</Text>
               </View>
-              <View style={{
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                flexDirection: 'row',
-                backgroundColor: 'black'
-              }}>
+              <View
+                style={{
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  flexDirection: 'row',
+                }}>
                 <PieChart
                   style={styles.pieChart}
                   widthAndHeight={widthAndHeightyellow}
                   series={red}
                   sliceColor={sliceColor}
                 />
-                <Text style={styles.label}>88% Required</Text>
+                <Text style={styles.label}>88%</Text>
+                <Text style={styles.label}>Required</Text>
               </View>
             </View>
             <PieChart
@@ -212,7 +217,7 @@ const Main = () => {
         </View>
         <View
           style={{
-            backgroundColor: 'purple',
+            // purple is here 🟪
             width: '95%',
             flex: 2.5,
             alignItems: 'center',
@@ -224,14 +229,14 @@ const Main = () => {
               flexDirection: 'row',
               justifyContent: 'space-between',
               borderWidth: 3,
-              borderColor: 'green',
+              borderColor: 'rgba(55, 55, 55, 1)',
               borderRadius: 20,
               width: '95%',
               height: '25%',
               alignItems: 'center',
             }}>
-            <Text>members</Text>
-            <Text>230</Text>
+            <Text style={{color: 'white'}}>members</Text>
+            <Text style={{color: 'white'}}>230</Text>
           </View>
           <TouchableOpacity
             style={{
@@ -245,7 +250,7 @@ const Main = () => {
         </View>
         <View
           style={{
-            backgroundColor: 'yellow',
+            // here the color yellow 🟨
             width: '95%',
             flex: 1.5,
             flexDirection: 'row',
@@ -282,7 +287,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'rgba(10, 14, 17, 1)',
   },
-  
+
   label: {
     color: 'white',
     fontFamily: FONT_REGULAR,
