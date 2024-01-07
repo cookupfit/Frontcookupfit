@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 const Mainmanagment = ({ onPress, title }) => {
   return (
     <View style={styles.container}>
-      <Text>Mainmanagment good</Text>
+      <Text>this is the page</Text>
     </View>
     
   );
