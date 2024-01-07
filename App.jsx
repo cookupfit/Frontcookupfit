@@ -41,7 +41,7 @@ function App() {
   return (
     <NavigationContainer>
       {/* test component for initialRouteName */}
-      <Stack.Navigator  initialRouteName="Mainmanagment">
+      <Stack.Navigator  initialRouteName="Main">
 
       {/* main components */}
       <Stack.Screen  name="Test" component={Test} options={{headerShown: false,}}/>
@@ -57,7 +57,7 @@ function App() {
       <Stack.Screen  name="Dtailuserpaiment" component={Dtailuserpaiment} options={{headerShown: true,}}/>
       <Stack.Screen  name="Edituser" component={Edituser} options={{headerShown: true,}}/>
       <Stack.Screen  name="Mainmanagment" component={Mainmanagment} options={{headerShown: true,}}/>
-
+      
       {/* plans components */}
       <Stack.Screen  name="Createplan" component={Createplan} options={{headerShown: true,}}/>
       <Stack.Screen  name="Editplan" component={Editplan} options={{headerShown: true,}}/>

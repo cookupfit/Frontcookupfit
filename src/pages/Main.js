@@ -7,26 +7,18 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import PieChart from 'react-native-pie-chart';
 import {FONT_REGULAR, FONT_BOLD, greenColor} from '../assets/colors';
 
-
-// main data charts 
+// main data charts
 import Users from '../components/datacharts/users';
+import Pie from '../components/datacharts/piechart';
+
 // main buttons
 import ProgramButton from '../components/buttons/programbutton';
 import ManagmentButton from '../components/buttons/managmentbutton';
 import DietButton from '../components/buttons/dietbutton';
 
 const Main = () => {
-  const widthAndHeight = 170;
-  const series = [75, 25];
-  const sliceColor = ['rgb(255, 99, 132)', 'rgb(255, 205, 86)'];
-  const widthAndHeightred = 16;
-  const widthAndHeightyellow = 16;
-  const red = [100, 0];
-  const yellow = [0, 100];
-
   const drawerRef = React.createRef();
 
   const openDrawer = () => {
@@ -105,8 +97,7 @@ const Main = () => {
           </View>
         </View>
       )}>
-
-        {/*view container*/}
+      {/*view container*/}
       <View style={styles.container}>
         <View
           style={{
@@ -158,82 +149,25 @@ const Main = () => {
             />
           </View>
         </View>
-        <View
-          style={{
-            // red is here 🟥
-            width: '95%',
-            flex: 2.4,
-            alignItems: 'center',
-            justifyContent: 'space-around',
-          }}>
-          {/*chart need to be fix*/}
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-              width: '100%',
-              height: '80%',
-              borderWidth: 2,
-              borderColor: greenColor,
-              borderRadius: 45,
-            }}>
-            {/* Button to open drawer */}
-
-            <View
-              style={{
-                justifyContent: 'space-between',
-                height: '35%',
-                width: '32%',
-              }}>
-              <View
-                style={{
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  flexDirection: 'row',
-                }}>
-                <PieChart
-                  style={styles.pieChart}
-                  widthAndHeight={widthAndHeightred}
-                  series={yellow}
-                  sliceColor={sliceColor}
-                />
-                <Text style={styles.label}>35%</Text>
-                <Text style={styles.label}>Pending</Text>
-              </View>
-              <View
-                style={{
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  flexDirection: 'row',
-                }}>
-                <PieChart
-                  style={styles.pieChart}
-                  widthAndHeight={widthAndHeightyellow}
-                  series={red}
-                  sliceColor={sliceColor}
-                />
-                <Text style={styles.label}>88%</Text>
-                <Text style={styles.label}>Required</Text>
-              </View>
-            </View>
-            <PieChart
-              widthAndHeight={widthAndHeight}
-              series={series}
-              sliceColor={sliceColor}
-            />
-          </View>
+        {/*view chart*/}
+        <View style={styles.viewchart}>
+          <Pie
+            yellowtitle="Pending"
+            redtitle="Required"
+            percentred="190"
+            percentyellow="100"
+            percent="%"
+          />
         </View>
-        {/*middle view*/}
-        <View
-          style={styles.midlleview}>
-            {/*users*/}
-          <Users title="mumbers" number="245"/>
+        {/*view middle*/}
+        <View style={styles.viewmiddle}>
+          {/*users*/}
+          <Users title="mumbers" number="245" />
           {/*buttons middle*/}
           <ManagmentButton title="managment" />
         </View>
-        <View style={styles.button}>
-          {/*buttons ends*/}
+        {/*buttons end*/}
+        <View style={styles.viewend}>
           <ProgramButton title="program" />
           <DietButton title="diet" />
         </View>
@@ -249,11 +183,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(10, 14, 17, 1)',
   },
 
-  label: {
-    color: 'white',
-    fontFamily: FONT_REGULAR,
-    fontSize: 15,
-  },
   drawerButton: {
     alignItems: 'center',
     flexDirection: 'column',
@@ -284,14 +213,20 @@ const styles = StyleSheet.create({
     marginVertical: 1.5,
     borderRadius: 2,
   },
-  midlleview: {
+  viewchart: {
     width: '95%',
-            flex: 2.5,
-            alignItems: 'center',
-            justifyContent: 'center',
-            justifyContent: 'space-around',
+    flex: 2.4,
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
-  button: {
+  viewmiddle: {
+    width: '95%',
+    flex: 2.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    justifyContent: 'space-around',
+  },
+  viewend: {
     width: '95%',
     flex: 1.5,
     flexDirection: 'row',
