@@ -15,6 +15,7 @@ import Profile from './src/pages/Profile';
 import Settings from './src/pages/Settings';
 import Diets from './src/pages/Diets';
 
+
 // import managment pages
 import Createpaiment from './src/pages/managment/Createpaiment';
 import Createuser from './src/pages/managment/Createuser';
@@ -43,7 +44,7 @@ function App() {
       <Stack.Navigator  initialRouteName="Main">
 
       {/* main components */}
-      <Stack.Screen  name="Test" component={Test} options={{headerShown: true,}}/>
+      <Stack.Screen  name="Test" component={Test} options={{headerShown: false,}}/>
       <Stack.Screen  name="Login" component={Login} options={{headerShown: false,}}/>
       <Stack.Screen  name="Main" component={Main} options={{headerShown: false,}}/>
       <Stack.Screen  name="Profile" component={Profile} options={{headerShown: true,}}/>
@@ -56,7 +57,7 @@ function App() {
       <Stack.Screen  name="Dtailuserpaiment" component={Dtailuserpaiment} options={{headerShown: true,}}/>
       <Stack.Screen  name="Edituser" component={Edituser} options={{headerShown: true,}}/>
       <Stack.Screen  name="Mainmanagment" component={Mainmanagment} options={{headerShown: true,}}/>
-
+      
       {/* plans components */}
       <Stack.Screen  name="Createplan" component={Createplan} options={{headerShown: true,}}/>
       <Stack.Screen  name="Editplan" component={Editplan} options={{headerShown: true,}}/>
