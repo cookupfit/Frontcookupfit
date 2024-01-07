@@ -15,6 +15,10 @@ import {faUsersGear} from '@fortawesome/free-solid-svg-icons/faUsersGear';
 import {faClipboard} from '@fortawesome/free-solid-svg-icons/faClipboard';
 import {faAppleWhole} from '@fortawesome/free-solid-svg-icons';
 
+//buttons
+import ManagmentButton from '../components/buttons/managmentbutton';
+
+
 const Main = () => {
   const widthAndHeight = 170;
   const series = [75, 25];
@@ -258,37 +262,7 @@ const Main = () => {
               230
             </Text>
           </View>
-          <TouchableOpacity
-            style={{
-              backgroundColor: 'rgba(45, 231, 44, 1)',
-              borderRadius: 20,
-              width: '90%',
-              height: '35%',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-            <View style={{
-              flexDirection: 'row',
-              width: '73%',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}>
-              <FontAwesomeIcon
-                icon={faUsersGear}
-                style={{color: 'rgba(10, 14, 17, 1)'}}
-                size={40}
-              />
-              <Text
-                style={{
-                  color: 'rgba(10, 14, 17, 1)',
-
-                  fontFamily: FONT_BOLD,
-                  fontSize: 33,
-                }}>
-                managment
-              </Text>
-            </View>
-          </TouchableOpacity>
+          <ManagmentButton/>
         </View>
         <View
           style={{
@@ -305,20 +279,23 @@ const Main = () => {
               borderRadius: 20,
               width: '40%',
               height: '60%',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}>
-            <View style={{
-              height: '68%',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}>
-            <FontAwesomeIcon
-              icon={faClipboard}
-              style={{color: 'white'}}
-              size={35}
-            />
-            <Text style={{color: 'white', fontFamily: FONT_BOLD,
-                  fontSize: 20,}}>program</Text>
+            <View
+              style={{
+                height: '68%',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}>
+              <FontAwesomeIcon
+                icon={faClipboard}
+                style={{color: 'white'}}
+                size={35}
+              />
+              <Text
+                style={{color: 'white', fontFamily: FONT_BOLD, fontSize: 20}}>
+                program
+              </Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity
@@ -327,19 +304,23 @@ const Main = () => {
               borderRadius: 20,
               width: '40%',
               height: '60%',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}>
-            <View style={{
-              height: '68%',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}>
-            <FontAwesomeIcon
-              icon={faAppleWhole}
-              style={{color: 'white'}}
-              size={35}
-            />
-            <Text style={{color: 'white', fontFamily: FONT_BOLD, fontSize: 20,}}>diet</Text>
+            <View
+              style={{
+                height: '68%',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}>
+              <FontAwesomeIcon
+                icon={faAppleWhole}
+                style={{color: 'white'}}
+                size={35}
+              />
+              <Text
+                style={{color: 'white', fontFamily: FONT_BOLD, fontSize: 20}}>
+                diet
+              </Text>
             </View>
           </TouchableOpacity>
         </View>

@@ -8,6 +8,7 @@ const Profile = ({ onPress, title }) => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Porfile Screen</Text>
+      
     </View>
     
   );
