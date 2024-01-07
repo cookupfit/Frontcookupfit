@@ -1,51 +1,52 @@
 import React from 'react';
-import { TouchableOpacity, Text, Alert, StyleSheet, View } from 'react-native';
-import { blackColor, greenColor, FONT_BOLD, whiteColor } from '../../assets/colors';
-import { useNavigation } from '@react-navigation/native';
+import {TouchableOpacity, Text, StyleSheet, View} from 'react-native';
+import {
+  blackColor,
+  greenColor,
+  FONT_BOLD,
+} from '../../assets/colors';
+import {useNavigation} from '@react-navigation/native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faUsersGear} from '@fortawesome/free-solid-svg-icons/faUsersGear';
 const styles = StyleSheet.create({
   button: {
-    
-  }
-});
-
-const ManagmentButton = ({ title }) => {
-  const navigation = useNavigation(); // Use the useNavigation hook to get the navigation object
-
-  const handleButtonClick = () => {
-    navigation.navigate('Test');
-  };
-
-  return (
-    <TouchableOpacity style={{backgroundColor: 'rgba(45, 231, 44, 1)',
+    backgroundColor: greenColor,
     borderRadius: 20,
     width: '90%',
     height: '35%',
     justifyContent: 'center',
-    alignItems: 'center'}}>
-            <View style={{
-              flexDirection: 'row',
-              width: '73%',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}>
-              <FontAwesomeIcon
-                icon={faUsersGear}
-                style={{color: 'rgba(10, 14, 17, 1)'}}
-                size={40}
-              />
-              <Text
-                style={{
-                  color: 'rgba(10, 14, 17, 1)',
+    alignItems: 'center',
+  },
+  items: {
+    flexDirection: 'row',
+    width: '73%',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  icon: {
+    color: blackColor,
+  },
+  text: {
+    color: blackColor,
+    fontFamily: FONT_BOLD,
+    fontSize: 33,
+  },
+});
 
-                  fontFamily: FONT_BOLD,
-                  fontSize: 33,
-                }}>
-                managment
-              </Text>
-            </View>
-          </TouchableOpacity>
+const ManagmentButton = ({title}) => {
+  const navigation = useNavigation(); // Use the useNavigation hook to get the navigation object
+
+  const handleButtonClick = () => {
+    navigation.navigate('Mainmanagment');
+  };
+
+  return (
+    <TouchableOpacity style={styles.button} onPress={handleButtonClick}>
+      <View style={styles.items}>
+        <FontAwesomeIcon icon={faUsersGear} style={styles.icon} size={40} />
+        <Text style={styles.text}>{title}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 

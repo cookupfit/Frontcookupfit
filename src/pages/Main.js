@@ -9,15 +9,14 @@ import {
 } from 'react-native';
 import PieChart from 'react-native-pie-chart';
 import {FONT_REGULAR, FONT_BOLD, greenColor} from '../assets/colors';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faUser} from '@fortawesome/free-solid-svg-icons/faUser';
-import {faUsersGear} from '@fortawesome/free-solid-svg-icons/faUsersGear';
-import {faClipboard} from '@fortawesome/free-solid-svg-icons/faClipboard';
-import {faAppleWhole} from '@fortawesome/free-solid-svg-icons';
 
-//buttons
+
+// main data charts 
+import Users from '../components/datacharts/users';
+// main buttons
+import ProgramButton from '../components/buttons/programbutton';
 import ManagmentButton from '../components/buttons/managmentbutton';
-
+import DietButton from '../components/buttons/dietbutton';
 
 const Main = () => {
   const widthAndHeight = 170;
@@ -106,6 +105,8 @@ const Main = () => {
           </View>
         </View>
       )}>
+
+        {/*view container*/}
       <View style={styles.container}>
         <View
           style={{
@@ -223,106 +224,18 @@ const Main = () => {
             />
           </View>
         </View>
+        {/*middle view*/}
         <View
-          style={{
-            // purple is here 🟪
-            width: '95%',
-            flex: 2.5,
-            alignItems: 'center',
-            justifyContent: 'center',
-            justifyContent: 'space-around',
-          }}>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              borderWidth: 3,
-              borderColor: 'rgba(55, 55, 55, 1)',
-              borderRadius: 20,
-              width: '95%',
-              height: '25%',
-              alignItems: 'center',
-            }}>
-            <FontAwesomeIcon icon={faUser} style={{color: 'white'}} size={24} />
-            <Text
-              style={{
-                color: 'white',
-                fontFamily: FONT_REGULAR,
-                fontSize: 23,
-              }}>
-              members
-            </Text>
-            <Text
-              style={{
-                color: 'white',
-                color: 'white',
-                fontFamily: FONT_REGULAR,
-                fontSize: 22,
-              }}>
-              230
-            </Text>
-          </View>
-          <ManagmentButton/>
+          style={styles.midlleview}>
+            {/*users*/}
+          <Users title="mumbers" number="245"/>
+          {/*buttons middle*/}
+          <ManagmentButton title="managment" />
         </View>
-        <View
-          style={{
-            // here the color yellow 🟨
-            width: '95%',
-            flex: 1.5,
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-around',
-          }}>
-          <TouchableOpacity
-            style={{
-              backgroundColor: 'rgba(55, 55, 55, 1)',
-              borderRadius: 20,
-              width: '40%',
-              height: '60%',
-              justifyContent: 'center',
-            }}>
-            <View
-              style={{
-                height: '68%',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-              }}>
-              <FontAwesomeIcon
-                icon={faClipboard}
-                style={{color: 'white'}}
-                size={35}
-              />
-              <Text
-                style={{color: 'white', fontFamily: FONT_BOLD, fontSize: 20}}>
-                program
-              </Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              backgroundColor: 'rgba(55, 55, 55, 1)',
-              borderRadius: 20,
-              width: '40%',
-              height: '60%',
-              justifyContent: 'center',
-            }}>
-            <View
-              style={{
-                height: '68%',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-              }}>
-              <FontAwesomeIcon
-                icon={faAppleWhole}
-                style={{color: 'white'}}
-                size={35}
-              />
-              <Text
-                style={{color: 'white', fontFamily: FONT_BOLD, fontSize: 20}}>
-                diet
-              </Text>
-            </View>
-          </TouchableOpacity>
+        <View style={styles.button}>
+          {/*buttons ends*/}
+          <ProgramButton title="program" />
+          <DietButton title="diet" />
         </View>
       </View>
     </DrawerLayoutAndroid>
@@ -370,6 +283,20 @@ const styles = StyleSheet.create({
     backgroundColor: 'white', // You can customize the color
     marginVertical: 1.5,
     borderRadius: 2,
+  },
+  midlleview: {
+    width: '95%',
+            flex: 2.5,
+            alignItems: 'center',
+            justifyContent: 'center',
+            justifyContent: 'space-around',
+  },
+  button: {
+    width: '95%',
+    flex: 1.5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
 });
 
