@@ -2,7 +2,10 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { redColor, FONT_BOLD, blackColor } from '../../assets/colors';
 
+
 // notifaction component
+
+import Notification from '../../components/notifaction/notification';
 
 const styles = StyleSheet.create({
   container: {
@@ -47,33 +50,24 @@ const styles = StyleSheet.create({
   }
 });
 
-const Dtailuserpaiment = ({ showNotification, title, dh }) => {
+const Dtailuserpaiment = () => {
   return (
     <View style={styles.container}>
-      {showNotification && (
-        <View style={styles.notifaction}>
-          <View style={styles.dh}>
-          <Text style={styles.text}>{title}</Text>
-          <Text style={styles.text}>{dh}</Text>
-          </View>
-        </View>
-      )}
+      <Notification />
       <View style={styles.profileview}>
-        <Text>-600</Text>
+        
       </View>
       <View style={styles.listpaiement}>
-        <Text>-600</Text>
+        
       </View>
       <View style={styles.viewend}>
-        <Text>-600</Text>
+        
       </View>
     </View>
   );
 };
 
 // Render the component directly
-const MyComponent = () => (
-  <Dtailuserpaiment showNotification={true} title="-600" dh="dh"/>
-);
 
-export default MyComponent;
+
+export default Dtailuserpaiment;
