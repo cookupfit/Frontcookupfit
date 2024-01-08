@@ -155,15 +155,15 @@ const Main = () => {
           <Pie
             yellowtitle="Pending"
             redtitle="Required"
-            percentred="190"
-            percentyellow="100"
+            percentred="150"
+            percentyellow="150"
             percent="%"
           />
         </View>
         {/*view middle*/}
         <View style={styles.viewmiddle}>
           {/*users*/}
-          <Users title="mumbers" number="245" />
+          <Users title="mumbers" number="1245" />
           {/*buttons middle*/}
           <ManagmentButton title="managment" />
         </View>
