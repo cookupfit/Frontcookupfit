@@ -92,8 +92,9 @@ const Main = () => {
                 width: '40%',
                 height: '10%',
               }}>
-              <Text style={{color: 'white', textAlign: 'center'}}>logout</Text>
+              <Text style={{color: 'white', textAlign: 'center'}} onPress={closeDrawer}>logout</Text>
             </TouchableOpacity>
+            
           </View>
         </View>
       )}>
