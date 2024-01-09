@@ -1,12 +1,19 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {redColor, FONT_BOLD, blackColor, greenColor, whiteColor,} from '../../assets/colors';
+
 
 // notifaction component
 
 import Notification from '../../components/notifaction/notification';
 
+// user data
+
 import Userdata from '../../components/datacharts/userdata';
+
+// Listpaiement buttons
+
+import Listpaiementbuttons from '../../components/buttons/listpaiementbuttons';
 
 const styles = StyleSheet.create({
   container: {
@@ -35,18 +42,12 @@ const styles = StyleSheet.create({
     flex: 1.6,
   },
   viewend: {
-    backgroundColor: 'blue',
     width: '100%',
     flex: 0.5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  dh: {
-    flexDirection: 'row',
-  },
-  text: {
-    fontSize: 35,
-    fontFamily: FONT_BOLD,
-    color: blackColor,
-  },
+  
 });
 
 const Dtailuserpaiment = () => {
@@ -56,8 +57,12 @@ const Dtailuserpaiment = () => {
       <View style={styles.profileview}>
         <Userdata month="03" year="23"/>
       </View>
-      <View style={styles.listpaiement}></View>
-      <View style={styles.viewend}></View>
+      <View style={styles.listpaiement}>
+
+      </View>
+      <View style={styles.viewend}>
+        <Listpaiementbuttons />
+      </View>
     </View>
   );
 };
