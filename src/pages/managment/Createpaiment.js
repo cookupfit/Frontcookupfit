@@ -7,6 +7,9 @@ import { redColor, FONT_BOLD, blackColor } from '../../assets/colors';
 
 import Notification from '../../components/notifaction/notification';
 
+import Userdata from '../../components/datacharts/userdata';
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -24,9 +27,10 @@ const styles = StyleSheet.create({
     
   },
   profileview: {
-    backgroundColor: 'yellow',
     width: '100%',
     flex: 0.9,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   listpaiement: {
     backgroundColor: 'purple',
@@ -50,7 +54,7 @@ const Createpaiment = () => {
     <View style={styles.container}>
       <Notification />
       <View style={styles.profileview}>
-        
+      <Userdata month="03" year="23"/>
       </View>
       <View style={styles.listpaiement}>
         

@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { redColor, FONT_BOLD, blackColor } from '../../assets/colors';
-
+import {View, Text, StyleSheet, Image} from 'react-native';
+import {redColor, FONT_BOLD, blackColor, greenColor, whiteColor,} from '../../assets/colors';
 
 // notifaction component
 
 import Notification from '../../components/notifaction/notification';
+
+import Userdata from '../../components/datacharts/userdata';
 
 const styles = StyleSheet.create({
   container: {
@@ -20,13 +21,13 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 25,
     borderBottomRightRadius: 25,
     alignItems: 'center',
-    justifyContent: 'center'
-    
+    justifyContent: 'center',
   },
   profileview: {
-    backgroundColor: 'yellow',
     width: '100%',
     flex: 0.9,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   listpaiement: {
     backgroundColor: 'purple',
@@ -40,14 +41,12 @@ const styles = StyleSheet.create({
   },
   dh: {
     flexDirection: 'row',
-   
-    
   },
   text: {
     fontSize: 35,
     fontFamily: FONT_BOLD,
-    color: blackColor
-  }
+    color: blackColor,
+  },
 });
 
 const Dtailuserpaiment = () => {
@@ -55,19 +54,14 @@ const Dtailuserpaiment = () => {
     <View style={styles.container}>
       <Notification />
       <View style={styles.profileview}>
-        
+        <Userdata month="03" year="23"/>
       </View>
-      <View style={styles.listpaiement}>
-        
-      </View>
-      <View style={styles.viewend}>
-        
-      </View>
+      <View style={styles.listpaiement}></View>
+      <View style={styles.viewend}></View>
     </View>
   );
 };
 
 // Render the component directly
-
 
 export default Dtailuserpaiment;

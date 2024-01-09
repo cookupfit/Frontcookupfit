@@ -41,7 +41,7 @@ function App() {
   return (
     <NavigationContainer>
       {/* test component for initialRouteName */}
-      <Stack.Navigator  initialRouteName="Createpaiment">
+      <Stack.Navigator  initialRouteName="Dtailuserpaiment">
 
       {/* main components */}
       <Stack.Screen  name="Test" component={Test} options={{headerShown: false,}}/>
