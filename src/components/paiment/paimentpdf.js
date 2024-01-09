@@ -13,16 +13,15 @@ import {faDownload} from '@fortawesome/free-solid-svg-icons';
 
 const styles = StyleSheet.create({
   view: {
-    flexDirection: 'column',
-    height: '20%',
-    justifyContent: 'flex-end',
     alignItems: 'center',
+    marginTop: 25,
   },
   border: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    height: '86%',
+    paddingTop: 6,
+    paddingBottom: 6,
     width: '90%',
     borderRadius: 19,
     borderColor: greyColor,
@@ -58,10 +57,14 @@ const Paimentpdf = ({month, year, price, c_month, c_year, date}) => {
   return (
     <View style={styles.view}>
       <View style={styles.border}>
-        <Text style={styles.text}>{month}/{year}</Text>
+        <Text style={styles.text}>
+          {month}/{year}
+        </Text>
         <View>
           <Text style={styles.text}>{price}dh</Text>
-          <Text style={styles.create}>Created : {c_month}/{c_year} {date}</Text>
+          <Text style={styles.create}>
+            Created : {c_month}/{c_year} {date}
+          </Text>
         </View>
 
         <View style={styles.borderdown}>
