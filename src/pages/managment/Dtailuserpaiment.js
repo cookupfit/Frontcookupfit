@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
-import {redColor, FONT_BOLD, blackColor, greenColor, whiteColor,} from '../../assets/colors';
+import {View, Text, StyleSheet, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {redColor, FONT_BOLD, blackColor, greenColor, whiteColor, greyColor,} from '../../assets/colors';
 
 
 // notifaction component
@@ -14,6 +14,10 @@ import Userdata from '../../components/datacharts/userdata';
 // Listpaiement buttons
 
 import Listpaiementbuttons from '../../components/buttons/listpaiementbuttons';
+
+// paiment pdf
+
+import Paimentpdf from '../../components/paiment/paimentpdf'
 
 const styles = StyleSheet.create({
   container: {
@@ -37,7 +41,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   listpaiement: {
-    backgroundColor: 'purple',
+    
     width: '100%',
     flex: 1.6,
   },
@@ -57,9 +61,18 @@ const Dtailuserpaiment = () => {
       <View style={styles.profileview}>
         <Userdata month="03" year="23"/>
       </View>
-      <View style={styles.listpaiement}>
-
-      </View>
+      <ScrollView style={styles.listpaiement}>
+      
+        <Paimentpdf month="03" year="23" price="200" c_month="04" c_year="23" />
+        <Paimentpdf month="03" year="23" price="200" c_month="04" c_year="23" />
+        <Paimentpdf month="03" year="23" price="200" c_month="04" c_year="23" />
+        <Paimentpdf month="03" year="23" price="200" c_month="04" c_year="23" />
+        <Paimentpdf month="03" year="23" price="200" c_month="04" c_year="23" />
+        <Paimentpdf month="03" year="23" price="200" c_month="04" c_year="23" />
+        <Paimentpdf month="03" year="23" price="200" c_month="04" c_year="23" />
+        <Paimentpdf month="03" year="23" price="200" c_month="04" c_year="23" />
+        
+      </ScrollView>
       <View style={styles.viewend}>
         <Listpaiementbuttons />
       </View>
