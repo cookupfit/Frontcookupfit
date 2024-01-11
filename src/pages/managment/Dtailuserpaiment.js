@@ -109,48 +109,6 @@ const Dtailuserpaiment = () => {
       c_month: '07',
       c_year: '23',
     },
-    july: {
-      month: '07',
-      year: '23',
-      price: '300',
-      c_month: '08',
-      c_year: '23',
-    },
-    august: {
-      month: '08',
-      year: '23',
-      price: '320',
-      c_month: '09',
-      c_year: '23',
-    },
-    september: {
-      month: '09',
-      year: '23',
-      price: '350',
-      c_month: '10',
-      c_year: '23',
-    },
-    october: {
-      month: '10',
-      year: '23',
-      price: '380',
-      c_month: '11',
-      c_year: '23',
-    },
-    november: {
-      month: '11',
-      year: '23',
-      price: '400',
-      c_month: '12',
-      c_year: '23',
-    },
-    december: {
-      month: '12',
-      year: '23',
-      price: '420',
-      c_month: '01',
-      c_year: '24',
-    },
   };
 
   return (

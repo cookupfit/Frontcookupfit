@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {redColor, FONT_BOLD, blackColor, greenColor, whiteColor,} from '../../assets/colors';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-
+import { useNavigation } from '@react-navigation/native';
 
 // fontawesome icons
 
@@ -24,18 +24,36 @@ icon : {
     color: blackColor,
 }
 });
-
+// navigation.navigate('Edituser');
 const Listpaiementbuttons = () => {
+
+    const navigation = useNavigation();
+
+    const Mainmanagment = () => {
+        
+        navigation.navigate('Mainmanagment');
+      };
+
+    const Edituser = () => {
+        
+        navigation.navigate('Edituser');
+      };
+    const Createpaiment = () => {
+        
+        navigation.navigate('Createpaiment');
+      };
+
   return (
 
         <View style={styles.view}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={Mainmanagment}>
       <FontAwesomeIcon icon={faArrowLeft} style={styles.icon} size={35} />
+      
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={Edituser}>
       <FontAwesomeIcon icon={faPenToSquare} style={styles.icon} size={35} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={Createpaiment}>
       <FontAwesomeIcon icon={faPlus} style={styles.icon} size={35} />
       </TouchableOpacity>
       </View>
