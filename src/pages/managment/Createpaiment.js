@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 import { redColor, FONT_BOLD, blackColor } from '../../assets/colors';
-import SelectMultiple from 'react-native-select-multiple';
 
-// notifaction component
+// notification component
 import Notification from '../../components/notifaction/notification';
 import Userdata from '../../components/datacharts/userdata';
 
@@ -34,28 +33,36 @@ const styles = StyleSheet.create({
     flex: 1.6,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
-  },
-  dh: {
-    flexDirection: 'row',
+    justifyContent: 'center',
   },
   text: {
-    fontSize: 35,
+    fontSize: 20,
     fontFamily: FONT_BOLD,
     color: blackColor,
+  },
+  // checkbox
+  checkBoxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  checkBox: {
+    width: 20,
+    height: 20,
+    marginRight: 8,
+    borderWidth: 1,
+    borderColor: 'white', // You can change the border color as needed
+    borderRadius: 5,
   },
 });
 
 const Createpaiment = () => {
-  const fruits = ['Apples', 'Oranges', 'Pears'];
+  const [isChecked, setChecked] = useState(false);
 
-  // Use the 'useState' hook to manage state
-  const [selectedFruits, setSelectedFruits] = useState([]);
-
-  const onSelectionsChange = (selectedFruits) => {
-    // selectedFruits is an array of { label, value }
-    setSelectedFruits(selectedFruits);
+  const toggleCheckBox = () => {
+    setChecked(!isChecked);
   };
 
+  const [text, onChangeText] = React.useState('Useless Text');
   return (
     <View style={styles.container}>
       <Notification />
@@ -63,11 +70,23 @@ const Createpaiment = () => {
         <Userdata month="03" year="23" />
       </View>
       <View style={styles.listpaiement}>
-        <SelectMultiple
-          items={fruits}
-          selectedItems={selectedFruits}
-          onSelectionsChange={onSelectionsChange}
-        />
+        {/*
+        <TouchableOpacity
+          style={styles.checkBoxContainer}
+          onPress={toggleCheckBox}
+        >
+          <View style={[styles.checkBox, { backgroundColor: isChecked ? 'rgba(45, 231, 44, 1)' : 'transparent' }]} />
+        </TouchableOpacity>
+        */}
+        
+      <TextInput
+        style={{borderWidth: 1, borderRadius: 10}}
+        onChangeText={onChangeText}
+        value={text}
+      />
+        <View>
+
+        </View>
       </View>
     </View>
   );
