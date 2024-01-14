@@ -21,7 +21,6 @@ import {
   greyColor,
 } from '../../assets/colors';
 
-
 import Paimentprice from '../../components/paiment/paimentprice';
 // notification component
 import Notification from '../../components/notifaction/notification';
@@ -140,7 +139,22 @@ const Createpaiment = () => {
           />
         </View>
 
-        <Paimentprice />
+        <ScrollView
+          style={{flex: 1, width: '90%'}}
+          contentContainerStyle={{
+            backgroundColor: 'red',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Paimentprice />
+          <Paimentprice />
+          <Paimentprice />
+          <Paimentprice />
+          <Paimentprice />
+          <Paimentprice />
+          <Paimentprice />
+          <Paimentprice />
+        </ScrollView>
 
         <TouchableOpacity></TouchableOpacity>
       </View>
