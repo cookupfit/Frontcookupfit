@@ -16,10 +16,13 @@ import {
 import {
   redColor,
   FONT_BOLD,
-  yellowColor,
+  blackColor,
   greenColor,
   greyColor,
 } from '../../assets/colors';
+
+
+
 
 import Paimentprice from '../../components/paiment/paimentprice';
 // notification component
@@ -49,7 +52,7 @@ const styles = StyleSheet.create({
   listpaiement: {
     backgroundColor: greenColor,
     width: '100%',
-    flex: 1.6,
+    flex: 2.2,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
     justifyContent: 'center',
@@ -67,16 +70,19 @@ const styles = StyleSheet.create({
     borderColor: greyColor,
   },
   v_view: {
-    width: '90%',
+    width: '85%',
+    marginTop: 15,
+    flex: 0.3,
+    justifyContent: 'center'
+
   },
-  checkBox: {
-    width: 20,
-    height: 20,
-    marginRight: 8,
-    borderWidth: 2,
-    borderColor: greyColor,
-    borderRadius: 5,
+  scrol: {
+    flex: 1, width: '90%',
   },
+  c_scrol: {
+    justifyContent: 'center',
+            alignItems: 'center',
+  }
 });
 
 const Createpaiment = () => {
@@ -103,7 +109,7 @@ const Createpaiment = () => {
       () => {
         Animated.timing(flexAnim, {
           toValue: 0.9,
-          duration: 1000,
+          duration: 900,
           easing: Easing.easeInOut,
           useNativeDriver: false,
         }).start();
@@ -128,6 +134,7 @@ const Createpaiment = () => {
       </Animated.View>
 
       <View style={styles.listpaiement}>
+
         <View style={styles.v_view}>
           <TextInput
             style={styles.input}
@@ -139,24 +146,37 @@ const Createpaiment = () => {
           />
         </View>
 
+        {!keyboardVisible &&
         <ScrollView
-          style={{flex: 1, width: '90%'}}
-          contentContainerStyle={{
-            backgroundColor: 'red',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
+          style={styles.scrol}
+          contentContainerStyle={styles.c_scrol}>
           <Paimentprice />
           <Paimentprice />
           <Paimentprice />
-          <Paimentprice />
-          <Paimentprice />
-          <Paimentprice />
-          <Paimentprice />
-          <Paimentprice />
-        </ScrollView>
+        </ScrollView>}
 
-        <TouchableOpacity></TouchableOpacity>
+        <View style={{flex: 0.4, width: '90%', alignItems: 'center', justifyContent: 'center'}}>
+        {keyboardVisible &&<TouchableOpacity style={{backgroundColor: blackColor,
+    width: '90%',
+    height: 70,
+    borderRadius: 40,
+    alignItems: 'center',}} >
+      <Text style={{color: greenColor,
+    fontFamily: FONT_BOLD,
+    fontSize: 30,
+    paddingTop: 12}}>ok</Text>
+    </TouchableOpacity>}
+    {!keyboardVisible &&<TouchableOpacity style={{backgroundColor: blackColor,
+    width: '90%',
+    height: 70,
+    borderRadius: 40,
+    alignItems: 'center',}} >
+      <Text style={{color: greenColor,
+    fontFamily: FONT_BOLD,
+    fontSize: 30,
+    paddingTop: 12}}>save</Text>
+    </TouchableOpacity>}
+        </View>
       </View>
     </KeyboardAvoidingView>
   );

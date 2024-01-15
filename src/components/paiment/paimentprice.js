@@ -37,7 +37,7 @@ const Paimentprice = () => {
   return (
     <View style={{
         width: '90%',
-        
+        marginTop: 20
       }}>
               <View
                 style={{
